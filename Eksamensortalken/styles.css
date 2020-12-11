@@ -1,0 +1,629 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #DBDBD0;
+    font-family: 'Delius';
+    font-size: 20px;
+}
+
+/*navbar start*/
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #85624B;
+    color: black;
+    z-index: 20;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-content: space-between;
+
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #C9BEA6;
+    color: #691F00;
+
+}
+
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    ;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 6%;
+    height: 20px;
+    margin-right: 2%;
+
+
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.logo {
+    width: 77px;
+    margin: 9%;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+        margin-top: 3%;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        font-size: 23px;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/*forside start*/
+
+.forsidetekst {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/forside.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+H4 {
+    font-size: 110%;
+    padding-left: 36%;
+    margin-top: 18%;
+    color: burlywood;
+}
+
+h5 {
+    display: none;
+}
+
+.forsidebillede {
+    z-index: 10;
+    position: absolute;
+    justify-content: center;
+    width: 91%;
+    margin-left: 3%;
+    top: 150px;
+
+}
+
+@media screen and (min-width: 450px) {
+    .forsidebillede {
+        width: 75%;
+        position: absolute;
+        padding-left: 16%;
+        top: 20%;
+
+    }
+
+    H4 {
+        font-size: 120%;
+        padding-left: 42%;
+        margin-top: 10%;
+
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .forsidebillede {
+        width: 75%;
+        top: 170px;
+        position: absolute;
+        padding-left: 20%;
+
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .forsidebillede {
+        width: 69%;
+        top: 28%;
+        position: absolute;
+        padding-left: 21%;
+    }
+
+    .logo {
+        width: 110px;
+        margin: 7%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        font-size: 24px;
+        margin-right: 8px;
+
+    }
+
+    H4 {
+        font-size: 120%;
+        padding-left: 3%;
+        margin-top: 2%;
+
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .forsidebillede {
+        width: 62%;
+        top: 200px;
+        position: absolute;
+        padding-left: 29%;
+
+    }
+}
+
+/*forside slut*/
+
+
+
+/*sort alken start*/
+.start1 {
+    width: 100%;
+}
+
+.beerinfo {
+    width: 100%;
+}
+
+.forogbag {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.beermad {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.tekst60 {
+    font-size: 100%;
+    padding: 16px;
+}
+
+
+@media screen and (max-width: 700px) {
+    h2 {
+        display: none;
+    }
+}
+
+
+
+
+/*grid start*/
+
+@media screen and (min-width: 700px) {
+
+    .overskrift {
+        padding-left: 1%;
+        font-size: 130%;
+    }
+
+    .start1 {
+        display: none;
+    }
+
+    .tekst60 {
+        font-size: 122%;
+        margin-top: -3%;
+    }
+
+
+
+    .grid-container {
+        display: grid;
+        margin: 3%;
+        margin-bottom: 0;
+        grid-template-columns: 48% 48%;
+        grid-auto-rows: 0.9fr 0.9fr 0.9fr;
+        grid-column-gap: 3%;
+        grid-template-areas:
+            "header content"
+            "sidebar article"
+            "sidebar2 article2"
+
+    }
+
+    .grid-item-4 {
+        grid-area: header;
+    }
+
+    .grid-item-5 {
+        grid-area: content;
+    }
+
+    .grid-item-7 {
+        grid-area: sidebar;
+        margin-top: 5%;
+
+    }
+
+    .grid-item-6 {
+        grid-area: article;
+
+    }
+
+    .grid-item-8 {
+        grid-area: sidebar2;
+        padding-bottom: 20%;
+    }
+
+    .grid-item-9 {
+        grid-area: article2;
+
+    }
+}
+
+/*grid slut*/
+/*sort alken slut*/
+
+
+
+
+/*historietime*/
+.start2 {
+    width: 100%;
+}
+
+.historie1 {
+    width: 100%;
+}
+
+.historie2 {
+    width: 100%;
+}
+
+.historie3 {
+    width: 100%;
+}
+
+.kloster {
+    width: 100%;
+}
+
+.tekst70 {
+    padding: 15px;
+    font-size: 100%;
+
+}
+
+@media screen and (max-width: 700px) {
+    h2 {
+        display: none;
+    }
+}
+
+/*grid start*/
+
+@media screen and (min-width: 700px) {
+
+    h2 {
+        padding-left: 42%;
+        font-size: 126%;
+    }
+
+    .start2 {
+        display: none;
+
+    }
+
+    .tekst70 {
+        margin-top: -3%;
+        font-size: 122%;
+
+    }
+
+
+    .grid-container2 {
+        display: grid;
+        margin: 3%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.8fr 0.8fr 0.8fr 0.7fr;
+        grid-gap: 1%;
+        grid-template-areas:
+            "tekst1 billede1"
+            "billede2 tekst2"
+            "tekst3 billede3"
+            "billede4 tekst4";
+    }
+
+    .tekst1 {
+        grid-area: tekst1;
+    }
+
+    .billede1 {
+        grid-area: billede1;
+    }
+
+    .billede2 {
+        grid-area: billede2;
+    }
+
+    .tekst2 {
+        grid-area: tekst2;
+    }
+
+    .tekst3 {
+        grid-area: tekst3;
+    }
+
+    .billede3 {
+        grid-area: billede3;
+    }
+
+    .billede4 {
+        grid-area: billede4;
+    }
+
+    .tekst4 {
+        grid-area: tekst4;
+    }
+}
+
+/*historietime slut*/
+
+
+
+/*bygtilbryg start*/
+.start3 {
+    width: 100%;
+}
+
+.bygtilbryg {
+    width: 100%;
+}
+
+.bryg1 {
+    width: 100%;
+}
+
+.bryg2 {
+    width: 100%;
+}
+
+.bryg3 {
+    width: 100%;
+
+}
+
+.lastbil {
+    width: 100%;
+}
+
+.tekst80 {
+    padding: 15px;
+    font-size: 100%;
+
+}
+
+.tekst90 {
+    font-size: 100%;
+    padding: 15px;
+
+}
+
+
+
+@media screen and (max-width: 700px) {
+    h2 {
+        display: none;
+    }
+}
+
+
+
+/*grid start*/
+@media screen and (min-width: 700px) {
+    .start3 {
+        display: none;
+    }
+
+    h2 {
+        padding-left: 42%;
+        font-size: 126%;
+    }
+
+    .bygtilbryg {
+        width: 70%;
+        padding-top: 3%;
+        padding-left: 28%
+    }
+
+    .tekst80 {
+        font-size: 122%;
+
+    }
+
+    .tekst90 {
+        font-size: 122%;
+        margin-top: 17%;
+        margin-left: 10%;
+
+    }
+
+
+    .grid-container3 {
+        display: grid;
+        margin: 3%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.2fr 1.2fr 1.2fr 0.3fr 0.9fr;
+        grid-gap: 0.9%;
+        grid-template-areas:
+            "billede111 billede111"
+            "tekst111 billede222"
+            "billede333 billede444"
+            "tekst222 tekst222"
+            "billede555 tekst333";
+    }
+
+    .billede111 {
+        grid-area: billede111;
+    }
+
+    .tekst111 {
+        grid-area: tekst111;
+    }
+
+    .billede222 {
+        grid-area: billede222;
+    }
+
+    .billede333 {
+        grid-area: billede333;
+    }
+
+    .billede444 {
+        grid-area: billede444;
+    }
+
+    .tekst222 {
+        grid-area: tekst222;
+    }
+
+    .billede555 {
+        grid-area: billede555;
+    }
+
+    .tekst333 {
+        grid-area: tekst333;
+    }
+
+}
+
+/*grid slut*/
+
+/*bygtilbryg slut*/
+
+
+/*konkurrence start*/
+
+.konkurrencebillede {
+    width: 100%;
+    padding-top: 3%;
+}
+
+
+.tekst50 {
+    padding: 15px;
+    font-size: 100%;
+}
+
+/*grid start*/
+@media screen and (min-width: 700px) {
+    .start3 {
+        display: none;
+    }
+
+    .tekst50 {
+        font-size: 122%;
+    }
+
+
+    .grid-container4 {
+        display: grid;
+        grid-template-columns: 59% 40%;
+        grid-template-rows: 1.5fr;
+        position: relative;
+        grid-gap: 3%;
+        margin: 3%;
+        grid-template-areas:
+            "billede tekst50";
+    }
+
+    .billede {
+        grid-area: billede;
+    }
+
+    .tekst {
+        grid-area: tekst;
+    }
+}
+
+
+/*konkurrence slut*/
+
+/*footer start*/
+footer {
+    text-align: center;
+    padding: 1px;
+    padding-left: 8%;
+    color: black;
+    background-color: #85624B;
+    font-size: 90%;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+#social-buttons a img {
+    margin: 15px 15px 0 0;
+    float: right;
+
+
+}
+
+/*footer slut*/
